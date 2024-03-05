@@ -6,7 +6,9 @@ var CoordX1 = 0;//middle circle coord
 var CoordY1 = 0;
 // this is the fireworks example
 //https://editor.p5js.org/anjchang/sketches/vL3ul5F73 maybe help with size changing
-function draw_one_frame() {
+
+
+function draw_one_frame(cur_frac) {
 	angleMode(DEGREES);
 	var circleSize = height/1.5; //establish circle size
 	var innerCircleSize = circleSize/1.5;
@@ -15,12 +17,14 @@ function draw_one_frame() {
 	stroke(255);
 	
 	
+	
+	//const fill_Array = ['white', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00', '#FF0000'];
 
-	fill(0,0,0);
+	fill(0);
 	ellipse(CoordX1,CoordY1, circleSize, circleSize); //base circle
 
 
-	
+	strokeWeight(10);
 	point(CoordX1+(circleSize/2), CoordY1-(circleSize/2));
 	point(CoordX1+(circleSize/2), CoordY1+(circleSize/2));
 
@@ -37,26 +41,95 @@ function draw_one_frame() {
 	//var bezierCtrlY1 = CoordY1- bezierYPtdiff;
 	//var bezierCtrlY2 = CoordY1+ bezierYPtdiff;
 
-	//bg shapes starting from right to left
+	
 	//fill(200);
 	
 	//bezier(CoordX1, bezierYPtStart, bezierCtrlX1, bezierCtrlY1, bezierCtrlX1, bezierCtrlY2, CoordX1, bezierYPtEnd);
 
+	//bg arcs starting from right to left
+	strokeWeight(1);
+	//fill('red');
+	stroke('white')
+
+
+
+
+
+
+	/*stroke(255);
 	fill('blue');
-	arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/5.5), innerCircleSize, 270, 90);
+	//arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/5.5), innerCircleSize, 270, 90);
 	fill('brown');
-	arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/10), innerCircleSize, 270, 90);
+	//arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/10), innerCircleSize, 270, 90);
 	
 	//left side
 	fill('blue');
 	arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/5.5), innerCircleSize, 90, 270);
 	fill('brown');
 	arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/10), innerCircleSize, 90, 270);
+*/
+
+
+
+
+
+
+
+//INNER CIRCLE + 2 arcs
+	const sizeAdjust_Array = [5.5,10,0,9.9,4.9,3,2,1.5,1.2]; 
+	const fill_Array = ['white', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00', '#FF0000'];
+	let colourMap =int(map(cur_frac, 0, 1, 0,fill_Array.length))
+
+	//RIGHT SIDE
+	for (let i = 0; i < 9; i ++) {
+		
+		
+		fill(fill_Array[colourMap]);
+
+		if (i < 2){
+			
+			arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/sizeAdjust_Array[i]), innerCircleSize, 270, 90);
+		} else if (i == 2) {
+			arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 270, 90);
+			
+		} else {
+
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/sizeAdjust_Array[i]), innerCircleSize, 270, 90);
+			
+		}
+		
+	}
+
+
+	//LEFT SIDE 
+	for (let i = 0; i < 9; i ++) {
+		
+		const fill_Array = ['#FF0000', '#FF7F00','#FFFF00','#00FF00','#0000FF','#4B0082', '#9400D3', 'brown', 'white'];
+		
+		fill(fill_Array[i]);
+
+		if (i < 2){
+			arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/sizeAdjust_Array[i]), innerCircleSize, 90, 270);
+			
+		} else if (i == 2) {
+		
+			arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 90, 270);
+		} else {
 
 	
-	//DELETE - BASE INNER CIRCLE FOR MAPPING 
-	fill(255);
-	ellipse(CoordX1,CoordY1,innerCircleSize,innerCircleSize);
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/sizeAdjust_Array[i]), innerCircleSize, 90, 270);
+		}
+	}
+
+	
+
+
+
+	
+
+
+	
+	/*
 	//right to left inner circle
 	fill('#9400D3');//light purp
 	arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 270, 90);
@@ -89,7 +162,7 @@ function draw_one_frame() {
 	fill('#9400D3');//red
 	arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/1.2), innerCircleSize, 90, 270);
 	
-
+*/
 	
 	
 	//beginShape();
