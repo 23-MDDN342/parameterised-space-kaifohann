@@ -25,3 +25,8 @@ I find this animation completely mesmerising and would love to see how I could e
 
 I was inspired also by Lucy Jaegers' previous work. I was shown this piece last year and remember finding the effect of this piece quite hypnotising. My wallpaper will attempt to recreate this effect - hopefully imitating the colour shifting and movement this wallpaper has. 
 
+UPDATE 1:
+I decided to start this process by focusing on recreating my inspiration gif. I lay down some base shapes relative to the height of the canvas to begin. I'm aware that the idea I have will rely heavily on relative numbers in order for it to be sized up successfully. 
+
+I've managed to sort the center circle shape using layered arcs. I'm currently struggling a lot with the shapes behind this main sphere. I've been attempting to use bezier curve and curves but these have been quite difficult to control. I'll attempt this again today in class but may need to resort to other techniques. 
+
