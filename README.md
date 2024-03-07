@@ -30,3 +30,5 @@ I decided to start this process by focusing on recreating my inspiration gif. I 
 
 I've managed to sort the center circle shape using layered arcs. I'm currently struggling a lot with the shapes behind this main sphere. I've been attempting to use bezier curve and curves but these have been quite difficult to control. I'll attempt this again today in class but may need to resort to other techniques. 
 
+UPDATE 2:
+I wanted to make sure that I could get the colour movement working on the inner circle so I attempted a few ways to do this. I initially tried to condense the code into a for-loop with a few if statements and one colour array. This wasn't successful as I couldn't control each individual section ie. The entire sphere would flash the same colour. to fix this I had to separate all shapes into their individual if statements and make a colour array for each section. The colour arrays were staggered so that the colour shifted from one side of the sphere to the other. This took quite a bit of playing around and I feel like I could make the code more elegant. I'll attempt to do this later but want to focus on the background circle 
