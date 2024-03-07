@@ -20,17 +20,41 @@ function draw_one_frame(cur_frac) {
 	
 	//const fill_Array = ['white', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00', '#FF0000'];
 
-	fill(0);
-	ellipse(CoordX1,CoordY1, circleSize, circleSize); //base circle
+	//fill(0);
+	//ellipse(CoordX1,CoordY1, circleSize, circleSize); //base circle
 
 
-	strokeWeight(10);
+	
+	
+	/*noStroke();
+	fill('green');
+	arc(CoordX1, CoordY1, circleSize+circleSize/30, circleSize, 270, 90);
+	fill('black');
+	ellipse(CoordX1+circleSize/5.2, CoordY1, circleSize/1.55, circleSize/1.2)
+	fill('grey');
+	ellipse(CoordX1+circleSize/6.2, CoordY1, circleSize/1.5, circleSize/1.3)
+	fill('violet');
+	ellipse(CoordX1+circleSize/8.2, CoordY1, circleSize/1.45, circleSize/1.4)8/
+	
+
+	//ellipse(CoordX1+circleSize/24, CoordY1, circleSize/1.3, circleSize/1.5)
+	
+	//arc(CoordX1+circleSize/24, CoordY1, circleSize/1.3, circleSize/1.5,250,120);
+
+	
+	
+	
+	//arc(CoordX1-circleSize/24, CoordY1, circleSize/1.3, circleSize/1.5,120,250);
+
+
+	/*strokeWeight(10);
 	point(CoordX1+(circleSize/2), CoordY1-(circleSize/2));
 	point(CoordX1+(circleSize/2), CoordY1+(circleSize/2));
 
 	point(CoordX1, CoordY1-(innerCircleSize/2)) //top start
 	point(CoordX1, CoordY1+(innerCircleSize/2)) //bottom end??
 
+	*/
 	//var bezierYPtStart = CoordY1-(innerCircleSize/2); //Y position start of bezier curves
 	//var bezierYPtEnd = CoordY1+(innerCircleSize/2); //Y position end of bezier curves
 
@@ -47,11 +71,11 @@ function draw_one_frame(cur_frac) {
 	//bezier(CoordX1, bezierYPtStart, bezierCtrlX1, bezierCtrlY1, bezierCtrlX1, bezierCtrlY2, CoordX1, bezierYPtEnd);
 
 	//bg arcs starting from right to left
-	strokeWeight(1);
+	//strokeWeight(1);
 	//fill('red');
-	stroke('white')
+	//stroke('white')
 
-
+	noStroke();
 
 
 
@@ -77,30 +101,214 @@ function draw_one_frame(cur_frac) {
 
 //INNER CIRCLE + 2 arcs
 	const sizeAdjust_Array = [5.5,10,0,9.9,4.9,3,2,1.5,1.2]; 
-	const fill_Array = ['white', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00', '#FF0000'];
-	let colourMap =int(map(cur_frac, 0, 1, 0,fill_Array.length))
 
+	
+/*
 	//RIGHT SIDE
 	for (let i = 0; i < 9; i ++) {
+		const fill_Array = ['white', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00', '#FF0000'];
+		const fill_Array1 = ['#FF0000', 'white', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00'];
+		let colourMap =int(map(cur_frac, 0, 1, 0,fill_Array.length))
 		
-		
-		fill(fill_Array[colourMap]);
 
 		if (i < 2){
-			
+			fill(fill_Array1[colourMap]);
 			arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/sizeAdjust_Array[i]), innerCircleSize, 270, 90);
 		} else if (i == 2) {
+			fill(fill_Array[colourMap]);
 			arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 270, 90);
 			
 		} else {
-
+			fill(fill_Array[colourMap]);
 			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/sizeAdjust_Array[i]), innerCircleSize, 270, 90);
 			
 		}
 		
 	}
+*/
+	//pick 12 colours for final 
+
+	const fill_Array = ['#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8','#fbfcf5', '#d6dd9f', '#aebc43','#a2863c','#955233','#4a2a24', '#24171e'];
+	const fill_Array1 = ['#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8','#fbfcf5', '#d6dd9f', '#aebc43','#a2863c','#955233','#4a2a24'];
+	const fill_Array2 = ['#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8','#fbfcf5', '#d6dd9f', '#aebc43','#a2863c','#955233'];
+	const fill_Array3 = ['#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8','#fbfcf5', '#d6dd9f', '#aebc43','#a2863c'];
+	const fill_Array4 = ['#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8','#fbfcf5', '#d6dd9f', '#aebc43'];
+	const fill_Array5 = ['#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8','#fbfcf5', '#d6dd9f'];
+	const fill_Array6 = ['#d6dd9f','#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8','#fbfcf5'];
+	const fill_Array7 = ['#fbfcf5','#d6dd9f','#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854', '#f6cda8'];
+	const fill_Array8 = ['#f6cda8','#fbfcf5','#d6dd9f','#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161', '#ea9854'];
+	const fill_Array9 = ['#ea9854','#f6cda8','#fbfcf5','#d6dd9f','#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68','#c56161'];
+	const fill_Array10 = ['#c56161','#ea9854','#f6cda8','#fbfcf5','#d6dd9f','#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f', '#a83b68'];
+	const fill_Array11 = ['#a83b68','#c56161','#ea9854','#f6cda8','#fbfcf5','#d6dd9f','#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c','#351a2f'];
+	const fill_Array12 = ['#351a2f','#a83b68','#c56161','#ea9854','#f6cda8','#fbfcf5','#d6dd9f','#aebc43','#a2863c','#955233','#4a2a24','#24171e','#0f101c'];
+
+	/*const fill_Array = ['#fff1f1','violet', 'grey','black', 'green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00', '#FF0000'];
+	const fill_Array1 = ['#FF0000', 'white','violet','grey','black', 'green','brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00'];
+	const fill_Array2 = ['#FF7F00', '#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00'];
+	const fill_Array3 = ['#FFFF00','#FF7F00', '#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00'];
+	const fill_Array4 = ['#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082','#0000FF'];
+	const fill_Array5 = ['#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082'];
+	const fill_Array6 = ['#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3'];
+	const fill_Array7 = ['#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown'];
+	const fill_Array8 = [ 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green'];
+	const fill_Array9 = ['green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black',];
+	const fill_Array10 = [ 'black','green','brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey'];
+	const fill_Array11 = ['grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet'];
+	const fill_Array12 = ['violet','grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white'];
+*/
+
+ 		/*const fill_Array = ['white','violet', 'grey','black', 'green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00', '#FF0000', ];
+		const fill_Array1 = ['#FF0000', 'white','violet','grey','black', 'green','brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00'];
+		const fill_Array2 = ['#FF7F00', '#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00'];
+		const fill_Array3 = ['#FFFF00','#FF7F00', '#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00'];
+		const fill_Array4 = ['#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082','#0000FF'];
+		const fill_Array5 = ['#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3', '#4B0082'];
+		const fill_Array6 = ['#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown','#9400D3'];
+		const fill_Array7 = ['#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green', 'brown'];
+		const fill_Array8 = [ 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black','green'];
+
+		const fill_Array9 = ['green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey','black',];
+		const fill_Array10 = [ 'black','green','brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet','grey'];
+		const fill_Array11 = ['grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white','violet'];
+		const fill_Array12 = ['violet','grey','black','green', 'brown','#9400D3', '#4B0082', '#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000', 'white'];
+
+	*/
 
 
+	for (let i = 0; i < 13; i ++) {
+		
+		let colourMap =int(map(cur_frac, 0, 1, 0,fill_Array.length))
+	
+		if (i == 0) {
+			fill(fill_Array[colourMap]);
+			arc(CoordX1, CoordY1, circleSize+circleSize/30, circleSize, 270, 90);
+		} else if (i == 1) {
+			fill(fill_Array1[colourMap]);
+			ellipse(CoordX1+circleSize/5.2, CoordY1, circleSize/1.55, circleSize/1.2)
+		} else if (i == 2) {
+			fill(fill_Array2[colourMap]);
+			ellipse(CoordX1+circleSize/6.2, CoordY1, circleSize/1.5, circleSize/1.3)
+		} else if (i == 3) {
+			fill(fill_Array3[colourMap]);
+			ellipse(CoordX1+circleSize/8.2, CoordY1, circleSize/1.45, circleSize/1.4)
+		} else if (i == 4) {
+			fill(fill_Array4[colourMap]);
+			arc(CoordX1+circleSize/12,CoordY1,circleSize/1.45, circleSize/1.46, 0, 360);
+		} else if (i == 5) {	
+			fill(fill_Array5[colourMap]);
+			arc(CoordX1+circleSize/22,CoordY1,circleSize/1.5, circleSize/1.48, 0, 360);
+		} else if (i == 6){
+			fill(fill_Array6[colourMap]);
+			arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 270, 90);
+		} else if (i == 7) {
+			fill(fill_Array7[colourMap]);
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/9.9), innerCircleSize, 270, 90);	
+		} else if (i == 8) {	
+			fill(fill_Array8[colourMap]);
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/4.9), innerCircleSize, 270, 90);
+		}else if (i == 9) {	
+			fill(fill_Array9[colourMap]);
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/3), innerCircleSize, 270, 90);
+		}else if (i == 10) {
+			fill(fill_Array10[colourMap]);
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/2), innerCircleSize, 270, 90);
+		}else if (i == 11) {	
+			fill(fill_Array11[colourMap]);
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/1.5), innerCircleSize, 270, 90);
+		}else if (i == 12) {	
+			fill(fill_Array12[colourMap]);
+			arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/1.2), innerCircleSize, 270, 90);
+		}
+	
+}
+
+for (let i = 0; i < 13; i ++) {
+		
+	let colourMap =int(map(cur_frac, 0, 1, 0,fill_Array.length))
+
+	if (i == 0) {
+		fill(fill_Array12[colourMap]);
+		arc(CoordX1, CoordY1, circleSize+circleSize/30, circleSize, 90, 270);
+	} else if (i == 1) {
+		fill(fill_Array11[colourMap]);
+		arc(CoordX1-circleSize/5.2, CoordY1, circleSize/1.55, circleSize/1.2, 60, 300);
+	} else if (i == 2) {
+		fill(fill_Array10[colourMap]);
+		arc(CoordX1-circleSize/6.2, CoordY1, circleSize/1.5, circleSize/1.3, 65, 295);
+	} else if (i == 3) {
+		fill(fill_Array9[colourMap]);
+		arc( CoordX1-circleSize/8.2, CoordY1, circleSize/1.45, circleSize/1.4, 70, 290);
+	} else if (i == 4) {
+		fill(fill_Array8[colourMap]);
+		arc(CoordX1-circleSize/12,CoordY1,circleSize/1.45, circleSize/1.46, 80, 280);
+	} else if (i == 5) {	
+		fill(fill_Array7[colourMap]);
+		arc(CoordX1-circleSize/22,CoordY1,circleSize/1.5, circleSize/1.48, 83, 277);
+	} else if (i == 6){
+		fill(fill_Array6[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 90, 270);
+	} else if (i == 7) {
+		fill(fill_Array5[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/9.9), innerCircleSize, 90, 270);	
+	} else if (i == 8) {	
+		fill(fill_Array4[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/4.9), innerCircleSize, 90, 270);
+	}else if (i == 9) {	
+		fill(fill_Array3[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/3), innerCircleSize, 90, 270);
+	}else if (i == 10) {
+		fill(fill_Array2[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/2), innerCircleSize, 90, 270);
+	}else if (i == 11) {	
+		fill(fill_Array1[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/1.5), innerCircleSize,  90,270);
+	}else if (i == 12) {	
+		fill(fill_Array[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/1.2), innerCircleSize, 90, 270);
+	}
+
+}
+
+/*
+for (let i = 0; i < 9; i ++) {
+		
+	let colourMap =int(map(cur_frac, 0, 1, 0,fill_Array.length))
+
+	if (i == 0) {
+		fill(fill_Array8[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/5.5), innerCircleSize, 90, 270);
+	} else if (i == 1) {	
+		fill(fill_Array7[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize+(innerCircleSize/10), innerCircleSize, 90, 270);
+	} else if (i == 2){
+		fill(fill_Array6[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 90, 270);
+	} else if (i == 3) {
+		fill(fill_Array5[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/9.9), innerCircleSize, 90, 270);	
+	} else if (i == 4) {	
+		fill(fill_Array4[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/4.9), innerCircleSize, 90, 270);
+	}else if (i == 5) {	
+		fill(fill_Array3[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/3), innerCircleSize, 90, 270);
+	}else if (i == 6) {
+		fill(fill_Array2[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/2), innerCircleSize, 90, 270);
+	}else if (i == 7) {	
+		fill(fill_Array1[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/1.5), innerCircleSize, 90, 270);
+	}else if (i == 8) {	
+		fill(fill_Array[colourMap]);
+		arc(CoordX1,CoordY1,innerCircleSize-(innerCircleSize/1.2), innerCircleSize, 90, 270);
+	}
+
+}
+
+
+*/
+
+/*
 	//LEFT SIDE 
 	for (let i = 0; i < 9; i ++) {
 		
@@ -121,15 +329,10 @@ function draw_one_frame(cur_frac) {
 		}
 	}
 
-	
-
-
+*/
 
 	
-
-
-	
-	/*
+/*
 	//right to left inner circle
 	fill('#9400D3');//light purp
 	arc(CoordX1,CoordY1,innerCircleSize, innerCircleSize, 270, 90);
