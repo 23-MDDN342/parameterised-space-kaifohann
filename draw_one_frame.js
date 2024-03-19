@@ -14,7 +14,7 @@ function draw_one_frame(cur_frac) {
 	background('white');
 	angleMode(DEGREES);
 	//translate(width/2, height/2); //draw from center
-	var circleSize = height/3; //establish circle size
+	var circleSize = height/2.5; //establish circle size
 	noStroke();
 	GridDraw(cur_frac, circleSize);
 	
@@ -47,13 +47,18 @@ function GridDraw(cur_frac, circleSize){
 
 		//for (let X = 0; X<=width; X+= width/8) {
 			//for (let Y=0; Y<= height; Y+= height/4) {
+				drawSphere(cur_frac, cur_x_pos2/2, height*0.5, circleSize/1.85);
+				drawSphere(cur_frac, cur_x_pos2/2, height*0.8, circleSize/1.85);
+				drawSphere(cur_frac, cur_x_pos2/2, height*0.2, circleSize/1.85);
+
+
 				drawSphere(cur_frac, cur_x_pos2, height/height, circleSize/1.85);	
-				drawSphere(cur_frac, cur_x_pos2, height/3, circleSize/1.85);	
-				drawSphere(cur_frac, cur_x_pos2, height/1.5, circleSize/1.85);	
+				drawSphere(cur_frac, cur_x_pos2, height*0.33, circleSize/1.85);	
+				drawSphere(cur_frac, cur_x_pos2, height*0.67, circleSize/1.85);	
 				drawSphere(cur_frac, cur_x_pos2, height, circleSize/1.85);	
 
-				//drawSphere(cur_frac, cur_x_pos2/2, height*0.5, circleSize/1.85);
-				//drawSphere(cur_frac, cur_x_pos2/2, height*0.8, circleSize/1.85);		
+					
+						
 
 			//}
 		//}
