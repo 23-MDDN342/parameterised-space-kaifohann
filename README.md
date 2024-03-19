@@ -37,3 +37,5 @@ UPDATE 3:
 After getting the colour changing cycle working I tried a few different colour combos. My original plan of having the orb shift only between 2 colours didn't work very well. In order for the 3Dish illusion to work i had to use a dark and light tone with 2 sets of colour gradients that transformed into and out of each colour extreme. Basically I had to make the colour shift cyclic and shifting between 2 colours wasn't giving this effect. I found a set of colours that I quite like and give the effect I want, but I might come back to play with a few other combos later. 
 
 I've now also managed to fit the spheres into a grid pattern using for loops. I've tested how the canvas looks depending on how many rows/columns I drew. I also played around with layering the spheres. Currently the code is drawing 2 grids - one with lots of smaller spheres in the background and another with larger,fewer spheres in the foreground. 
+
+UPDATE 4:
