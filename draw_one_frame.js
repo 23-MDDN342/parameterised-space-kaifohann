@@ -22,16 +22,30 @@ function draw_one_frame(cur_frac) {
 
 function GridDraw(cur_frac, circleSize){
 
-	for (let X = 0; X<=width; X+= width/8) {
-		for (let Y=0; Y<= height; Y+= height/4) {
-			drawSphere(cur_frac, X, Y, circleSize/1.85);	
-		}
-	}
+	//for (let X = 0; X<=width; X+= width/8) {
+		//for (let Y=0; Y<= height; Y+= height/4) {
+			//drawSphere(cur_frac, X, Y, circleSize/1.85);	
+		//}
+	//}
+	let grid_points1 = [ 
+		 1.25 * width, 0.75 * width,0.50 * width,0.25 * width, -0.25 * width,-0.50 * width
+	]
+	for(let i=0; i<grid_points1.length-1; i++) {
+			let cur_x_pos = map(cur_frac, 0, 1, grid_points1[i], grid_points1[i+1])
 	for (let X = 0; X<=width; X+= width/4) {
 		for (let Y=0; Y<= height; Y+= height/2) {
-			drawSphere(cur_frac, X, Y, circleSize);	
+			
+		
+		
+			drawSphere(cur_frac, cur_x_pos, height/2, circleSize);	
+	 	 }
 		}
 	}
+	//for (let X = 0; X<=width; X+= width/4) {
+		//for (let Y=0; Y<= height; Y+= height/2) {
+			//drawSphere(cur_frac, X, Y, circleSize);	
+		//}
+	//}
 
 	
 }
