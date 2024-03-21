@@ -3,6 +3,7 @@ const debugViewText = "#ff0000";
 const debugZoomBackground = "#555588"
 const debugZoomScale = 0.5;
 
+
 // this can be modified after we discuss in lecture
 const buffersPerFrame = 1;
 
