@@ -2,6 +2,8 @@
 ## Hannah Kai Fong
 
 This p5.js sketch is designed to create a captivating zoom background that seamlessly loops. It’s built with parameters that make it adaptable to various scales.
+The final design is a fun, 70s inspired visual workout. It explores aspects of 3D illusion with colour and forms a sense of depth through its layering.
+
 
 My initial intentions for this design was to further explore [a gif](https://bestanimations.com/Balls&Buttons/amazing-3d-computer-ball-sphere-art-animated-gif-6.gif) I had found that involved some very satisfying movement. I was completely mesmerised by how effective cycling through colour could be and wanted to attempt the same technique. I was also inspired by [Lucy Jaegers’ previous work](https://nuku.wgtn.ac.nz/courses/19107/files/1868546?module_item_id=402239), which had been shown to us in class. Again, her use of colour shifting was particularly appealing to me.
 
@@ -20,7 +22,9 @@ I think the 70s colour palette ended up naturally moving me towards a more [70s 
 
 I did experiment with moving away from the 70s colour palette at the end of the project, but I returned to it as it felt right with the sphere shapes. I think this is probably because of its visual similarity to 70s flower power patterns [like this](https://carmengonzalezartist.com/product/delicate-flower-power-20x20-acrylic-on-canvas-original/) that I've always had an affinity with.
 
+As a Zoom background, this design is quite chaotic, but I think it's also fun and hynotising too. I don't think the design works in a formal context, but it could easily be used to add some energetic ambience to a more casual, laidback call.
+
 There are still some major issues with the set up of my code and unfortunately I don’t have the time to fix them. If given extra time, I would seperate the colour arrays from the function and turn them into variables or nested arrays. This would allow me to condense the two sphere drawing functions that the code relies on. I would also attempt to find a better solution than if-statements inside the sphere drawing function. Although this works perfectly, the repetitiveness of the code suggests there’s likely a loop to fix this. 
 
-Having said this, I’m really pleased with the final design. I think it has more of a unique voice than I thought it would and has evolved away from my original design in a very fun, energetic way. Although there are some issues with the style of the code, I think my piece addresses the ‘zoom background’ aspect of the brief in an interesting way and creates its own unique ambience.
+Having said this, I’m really pleased with the final design. It has more of a unique voice than I thought it would and has evolved away from my original design in a very fun, energetic way. Although there are some issues with the style of the code, I think my piece addresses the ‘Zoom background’ aspect of the brief in an interesting manner and has the ability to add some 'zing' to calls. 
 
